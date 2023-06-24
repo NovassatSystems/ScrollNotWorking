@@ -14,7 +14,7 @@
                     Padding="8"
                     RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*">
 
-                    <Local:TitleEditorView Title="City Town"  />
+                    <Local:TitleEditorView Title="City Town" />
 
                     <Local:TitleEditorView Title="Property Name" Grid.Row="1" />
 
@@ -88,7 +88,7 @@
 
                     <VerticalStackLayout Grid.Row="24">
                         <Label Text="Boiler last serviced date" />
-                        <DatePicker Margin="0,0,0,10" DateSelected="DatePicker_DateSelected" />
+                        <DatePicker Margin="0,0,0,10" />
                     </VerticalStackLayout>
 
                     <Grid
