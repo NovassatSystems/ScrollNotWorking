@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Grid
+    x:Class="ScrollNotWorking.TitleEditorView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="titleEditorView"
+    Padding="0"
+    RowDefinitions="Auto,Auto"
+    RowSpacing="0"
+    VerticalOptions="Start">
+    <Label
+        Grid.Row="0"
+        Text="{Binding Title, Source={x:Reference titleEditorView}}"
+        TextColor="MidnightBlue"
+        VerticalOptions="EndAndExpand" />
+    <Editor
+        Grid.Row="1"
+        Margin="0,0,0,10"
+        Keyboard="{Binding Keyboard, Source={x:Reference titleEditorView}}"
+        MaxLength="40"
+        Placeholder="{Binding Title, Source={x:Reference titleEditorView}, StringFormat='{0} here'}"
+        Text="{Binding Text, Source={x:Reference titleEditorView}}"
+        VerticalOptions="Start" />
+</Grid>

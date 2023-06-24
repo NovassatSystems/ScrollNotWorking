@@ -1,101 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ScrollNotWorking.MainPage">
+<ContentPage
+    x:Class="ScrollNotWorking.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Local="clr-namespace:ScrollNotWorking">
 
     <ContentPage.Content>
         <StackLayout>
             <ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout Padding="10" Margin="10">
-                    <Label Text="Property name"  />
-                    <Editor Text="" Placeholder="Property name here" MaxLength="40" Margin="0,0,0,10"/>
 
-                    <Label Text="Address line 1"  />
-                    <Editor Text="" Placeholder="Address line 1 here" MaxLength="40" Margin="0,0,0,10"/>
+                <Grid
+                    Margin="8"
+                    Padding="8"
+                    RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*">
 
-                    <Label Text="Address line 2"  />
-                    <Editor Text="" Placeholder="Address line 2 here" MaxLength="40" Margin="0,0,0,10"/>
+                    <Local:TitleEditorView Title="City Town"  />
 
-                    <Label Text="Eircode"  />
-                    <Editor Text="" Placeholder="Eircode here" MaxLength="40" Margin="0,0,0,10"/>
+                    <Local:TitleEditorView Title="Property Name" Grid.Row="1" />
 
-                    <Label Text="City/Town"  />
-                    <Editor Text="" Placeholder="City/Town here" MaxLength="40" Margin="0,0,0,10"/>
+                    <Local:TitleEditorView Title="Address line 1" Grid.Row="2" />
 
-                    <Label Text="County"  />
-                    <Editor Text="" Placeholder="County here" MaxLength="40" Margin="0,0,0,10"/>
+                    <Local:TitleEditorView Title="Address line 2" Grid.Row="3" />
 
-                    <Label Text="Country"  />
-                    <Editor Text="" Placeholder="Country here" MaxLength="40" Margin="0,0,0,10"/>
+                    <Local:TitleEditorView Title="Eircode" Grid.Row="4" />
 
-                    <Label Text="Bedrooms"  />
-                    <Editor Keyboard="Numeric" Margin="0,0,0,10"/>
+                    <Local:TitleEditorView Title="City Town" Grid.Row="5" />
 
-                    <Label Text="Bathrooms"  />
-                    <Editor Keyboard="Numeric" Text="" Margin="0,0,0,10"/>
+                    <Local:TitleEditorView Title="County" Grid.Row="6" />
 
-                    <Grid ColumnDefinitions="2*,*"  Margin="0,0,0,10">
-                        <Label Text="Is furnished" VerticalOptions="Center"  />
-                        <Switch Grid.Column="1"  />
-                    </Grid>
+                    <Local:TitleEditorView Title="Country" Grid.Row="7" />
 
-                    <Grid ColumnDefinitions="2*,*"  Margin="0,0,0,10">
-                        <Label Text="Has carpark" VerticalOptions="Center"  />
-                        <Switch Grid.Column="1"  />
-                    </Grid>
+                    <Local:TitleEditorView
+                        Title="Bedrooms"
+                        Grid.Row="8"
+                        Keyboard="Numeric" />
 
-                    <Label Text="MPRN"  />
-                    <Editor Placeholder="MPRN here" MaxLength="40" Margin="0,0,0,10"/>
+                    <Local:TitleEditorView
+                        Title="Bathrooms"
+                        Grid.Row="9"
+                        Keyboard="Numeric" />
 
-                    <Label Text="GPRN"  />
-                    <Editor  Placeholder="GPRN here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="WRPN"  />
-                    <Editor  Placeholder="WRPN here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="BER rating"  />
-                    <Editor  Placeholder="BER rating here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="BER number"  />
-                    <Editor  Placeholder="BER number here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="BER expiry date"  />
-                    <DatePicker  Margin="0,0,0,10"/>
-
-                    <Label Text="Insurance company name"  />
-                    <Editor  Placeholder="Insurance company name here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="Insurance policy number"  />
-                    <Editor  Placeholder="Insurance policy number here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="Insurance company phone number"  />
-                    <Editor  Placeholder="Insurance company phone number here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="Insurance expiry date"  />
-                    <DatePicker Margin="0,0,0,10"/>
-
-                    <Label Text="Boiler make"  />
-                    <Editor  Placeholder="Boiler make here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="Boiler model"  />
-                    <Editor  Placeholder="Boiler model here" MaxLength="40" Margin="0,0,0,10"/>
-
-                    <Label Text="Boiler last serviced date"  />
-                    <DatePicker Margin="0,0,0,10"/>
-
-                    <Grid ColumnDefinitions="2*,*"  Margin="0,0,0,10">
-                        <Label Text="Is family home" VerticalOptions="Center"  />
-                        <Switch Grid.Column="1"  />
-                    </Grid>
-
-                    <Grid ColumnDefinitions="2*,*"  Margin="0,0,0,10">
-                        <Label Text="Rent per bedroom" VerticalOptions="Center"  />
+                    <Grid
+                        Grid.Row="10"
+                        Margin="0,0,0,10"
+                        ColumnDefinitions="2*,*">
+                        <Label Text="Is furnished" VerticalOptions="Center" />
                         <Switch Grid.Column="1" />
                     </Grid>
 
-                    <Button Text="Salve"></Button>
+                    <Grid
+                        Grid.Row="11"
+                        Margin="0,0,0,10"
+                        ColumnDefinitions="2*,*">
+                        <Label Text="Has carpark" VerticalOptions="Center" />
+                        <Switch Grid.Column="1" />
+                    </Grid>
 
-                </StackLayout>
+                    <Local:TitleEditorView Title="MPRN" Grid.Row="12" />
+
+                    <Local:TitleEditorView Title="GPRN" Grid.Row="13" />
+
+                    <Local:TitleEditorView Title="WRPN" Grid.Row="14" />
+
+                    <Local:TitleEditorView Title="BER rating" Grid.Row="15" />
+
+                    <Local:TitleEditorView Title="BER number" Grid.Row="16" />
+
+                    <VerticalStackLayout Grid.Row="17">
+                        <Label Text="BER expiry date" />
+                        <DatePicker Margin="0,0,0,10" />
+                    </VerticalStackLayout>
+
+                    <Local:TitleEditorView Title="Insurance company name" Grid.Row="18" />
+
+                    <Local:TitleEditorView Title="Insurance policy number" Grid.Row="19" />
+
+                    <Local:TitleEditorView Title="Insurance company phone number" Grid.Row="20" />
+
+                    <VerticalStackLayout Grid.Row="21">
+                        <Label Text="Insurance expiry date" />
+                        <DatePicker Margin="0,0,0,10" />
+                    </VerticalStackLayout>
+
+                    <Local:TitleEditorView Title="Boiler make" Grid.Row="22" />
+
+                    <Local:TitleEditorView Title="Boiler model" Grid.Row="23" />
+
+                    <VerticalStackLayout Grid.Row="24">
+                        <Label Text="Boiler last serviced date" />
+                        <DatePicker Margin="0,0,0,10" DateSelected="DatePicker_DateSelected" />
+                    </VerticalStackLayout>
+
+                    <Grid
+                        Grid.Row="25"
+                        Margin="0,0,0,10"
+                        ColumnDefinitions="2*,*">
+                        <Label Text="Is family home" VerticalOptions="Center" />
+                        <Switch Grid.Column="1" />
+                    </Grid>
+
+                    <Grid
+                        Grid.Row="26"
+                        Margin="0,0,0,10"
+                        ColumnDefinitions="2*,*">
+                        <Label Text="Rent per bedroom" VerticalOptions="Center" />
+                        <Switch Grid.Column="1" />
+                    </Grid>
+
+                    <Button
+                        Grid.Row="27"
+                        Text="Salvee"
+                        VerticalOptions="End" />
+
+                </Grid>
             </ScrollView>
         </StackLayout>
 
